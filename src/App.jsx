@@ -994,16 +994,17 @@ function ShareButtons({ showToast }) {
 }
 
 function BgmPlayer({ shouldPlay }) {
-  const [ip, setIp]=useState(false);const ar=useRef(null);
+  const [ip, setIp]=useState(false);const ar=useRef(null);const hasAutoPlayed=useRef(false);
   useEffect(()=>{if(config.bgm.src){ar.current=new Audio(config.bgm.src);ar.current.loop=true;ar.current.volume=0.4;}return()=>{if(ar.current){ar.current.pause();ar.current=null;}};},[]);
 
   // 인트로 "청첩장 열기" 클릭 시 자동 재생
   useEffect(()=>{
-    if(shouldPlay&&config.bgm.autoPlay&&!ip){
+    if(shouldPlay&&config.bgm.autoPlay&&!hasAutoPlayed.current){
+      hasAutoPlayed.current=true;
       if(ar.current){ar.current.play().then(()=>setIp(true)).catch(()=>{});}
-      else if(!config.bgm.src){setIp(true);} // 데모 모드
+      else if(!config.bgm.src){setIp(true);}
     }
-  },[shouldPlay, ip]);
+  },[shouldPlay]);
 
   const tg=()=>{if(!ar.current&&!config.bgm.src){setIp(p=>!p);return;}if(!ar.current)return;if(ip){ar.current.pause();setIp(false);}else{ar.current.play().then(()=>setIp(true)).catch(()=>{});}};
   return (
