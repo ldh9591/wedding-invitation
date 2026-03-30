@@ -797,7 +797,7 @@ function Guestbook({ showToast }) {
       })
       .catch(() => {})
       .finally(() => setLoading(false));
-  }, []);
+  }, [gasUrl, isOnline]);
 
   // ── 등록 ──
   const handleSubmit = async () => {
@@ -1003,7 +1003,7 @@ function BgmPlayer({ shouldPlay }) {
       if(ar.current){ar.current.play().then(()=>setIp(true)).catch(()=>{});}
       else if(!config.bgm.src){setIp(true);} // 데모 모드
     }
-  },[shouldPlay]);
+  },[shouldPlay, ip]);
 
   const tg=()=>{if(!ar.current&&!config.bgm.src){setIp(p=>!p);return;}if(!ar.current)return;if(ip){ar.current.pause();setIp(false);}else{ar.current.play().then(()=>setIp(true)).catch(()=>{});}};
   return (
