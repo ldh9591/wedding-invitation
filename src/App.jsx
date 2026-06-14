@@ -8,7 +8,7 @@ const config = {
   intro: {
     type: "door", // 'door' | 'fade' | 'slide'
     title: "우리 결혼합니다",
-    subtitle: "2026. 10. 10 토요일 오후 2시",
+    subtitle: "2027. 3. 20 토요일 오후 1시",
   },
   groom: {
     lastName: "임", firstName: "돈혁", relation: "차남",
@@ -23,9 +23,9 @@ const config = {
     parentAccounts: [],
   },
   wedding: {
-    date: "2026-10-10T14:00:00",
-    location: "더채플앳청담", address: "서울 강남구 청담동 123-45",
-    floor: "3층 그랜드볼룸", phone: "02-1234-5678",
+    date: "2027-03-20T13:00:00",
+    location: "라붐웨딩홀", address: "광주 서구 상무누리로 59",
+    floor: "", phone: "",
   },
   greeting: {
     title: "소중한 분들을 초대합니다",
@@ -48,8 +48,8 @@ const config = {
     "/images/photo13.jpg",
     "/images/photo14.jpg",
     "/images/photo15.jpg",] },
-  map: { lat: 37.5245, lng: 127.0467, kakaoMapUrl: "", naverMapUrl: "", tmapUrl: "" },
-  transport: { subway: "청담역 (7호선) 1번 출구 도보 5분", bus: "청담사거리 정류장 하차", parking: "건물 지하 주차장 이용 가능 (2시간 무료)" },
+  map: { lat: 35.1551, lng: 126.8516, kakaoMapUrl: "http://place.map.kakao.com/19883134", naverMapUrl: "", tmapUrl: "" },
+  transport: { subway: "상무역 (1호선) 4번 출구 도보 5분", bus: "상무누리로 정류장 하차", parking: "건물 주차장 이용 가능" },
   // ── BGM ──
   // 배포 시: public/bgm.mp3 에 파일을 넣고 src: "/bgm.mp3" 로 설정
   // 개발 미리보기에서는 src: "" (빈 문자열)으로 두면 데모 모드 동작
