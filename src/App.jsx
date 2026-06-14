@@ -49,7 +49,7 @@ const config = {
     "/images/photo14.jpg",
     "/images/photo15.jpg",] },
   map: { lat: 35.1551, lng: 126.8516, kakaoMapUrl: "http://place.map.kakao.com/19883134", naverMapUrl: "", tmapUrl: "" },
-  transport: { subway: "", bus: "상무누리로 정류장 하차", parking: "건물 주차장 이용 가능" },
+  transport: { subway: "", bus: "일곡38·상무64번 버스 → 김대중컨벤션센터 정류장 하차", parking: "건물 주차장 이용 가능" },
   // ── BGM ──
   // 배포 시: public/bgm.mp3 에 파일을 넣고 src: "/bgm.mp3" 로 설정
   // 개발 미리보기에서는 src: "" (빈 문자열)으로 두면 데모 모드 동작
